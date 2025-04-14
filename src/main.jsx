@@ -14,6 +14,22 @@ const router = createBrowserRouter([
     path: "/",
     element: <div>Hello React Router</div>,
   },
+  {
+    path: "about",
+    element: <div>About section here</div>
+  },
+  {
+    path: "blogs",
+    element: <div>Blogs section here</div>
+  },
+  {
+    path: "component",
+    element: <App></App>
+  },
+  {
+    path: "App",
+    Component: App
+  }
 ]);
 
 

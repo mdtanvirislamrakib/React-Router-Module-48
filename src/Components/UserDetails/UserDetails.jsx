@@ -1,10 +1,11 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 
 const UserDetails = () => {
     const userData = useLoaderData();
-    console.log(userData);
     const {name, website} = userData;
+
+    const navigate = useNavigate();
 
     const userDataStyle = {
         border: '2px solid green',
@@ -17,6 +18,7 @@ const UserDetails = () => {
             <h2>Users Details Here</h2>
             <h3>Name: {name}</h3>
             <p>My Website: {website}</p>
+            <button onClick={() => navigate(-1)}>Go back</button>
         </div>
     );
 };
